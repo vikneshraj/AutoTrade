@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>TradeWheels.in</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="BootStrap/css/bootstrap.css"> -->
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="CSS/materialize.css"  media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="CSS/MyStyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="JavaScript/sha.js"></script>
+  <script type="text/javascript" src="JavaScript/otpgenerator.js"></script>
+  <script type="text/javascript" src="JavaScript/totp.js"></script>
+  <script type="text/javascript" src="JavaScript/myScript.js"></script>
+  <style>
+      #section1 {height:100vh;color: #fff; background-image: url('Media/ChevroletCamaro.jpg');}
+  </style>
+</head>
+<body>
+    <div id="section1">
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo">&nbsp;&nbsp;TradeWheels<i class="material-icons right">group_work</i></a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li class="waves-effect" id="link3"><a class="modal-trigger" href="#car_evaluation_modal"><i class="material-icons right">assessment</i></a></li>
+                        <li class="waves-effect" id="link3"><a href="#section41"><i class="material-icons right">phone</i></a></li>
+                        <li class="waves-effect" id="btn_login_navbar"><a class="modal-trigger" href="#login_modal"><i class="material-icons right">input</i>Login</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li class="waves-effect" id="btn_login_navbar"><a class="modal-trigger" href="#login_modal">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+<div id="login_modal" class="modal modal-fixed-footer" style="background-image: url(Media/benz2.jpg);">
+    <div class="modal-content">
+      <div class="row">
+        <form class="col s12" id="login_form">
+          <div class="row" style="margin-bottom: 0px;">
+            <h6 align="center">Login to your account</h6>
+          </div>
+          <div class="row" style="margin-bottom: 0px">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">phone</i>
+              <input id="phone_number" type="text" class="validate">
+              <label for="phone_number">Phone Number</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">perm_identity</i>
+              <input id="password" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row">
+              <a class="waves-effect waves-light btn" style="width: 100%"><i class="material-icons right">send</i>Login</a>
+          </div>
+          <div class="row">
+            <p style="text-align: center;"><a href="#forgot_password_modal" class="modal-trigger" id="forgot_password_close_modal">Forgot your password?</a></p>
+          </div>
+          <!--<div class="row">
+              <input id="reset_button" type="reset">
+          </div>-->
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer #ffccbc deep-orange lighten-4" style="height: auto;">
+      <p style="text-align: center;">
+        Ready to start selling? <br/>
+        <a class="waves-effect waves-light btn modal-trigger" id="signup_button_in_login" style="width: 50%; text-decoration: none; float: none;" href="#signup_modal"><i class="material-icons right">launch</i>Signup Now!</a>
+      </p>
+    </div>
+</div>
+
+<div id="signup_modal" class="modal">
+    <div class="modal-content" style="height: auto">
+      <div class="row">
+        <form class="col s12">
+          <div class="row" style="margin-bottom: 0px;">
+            <h6 align="center">Register with TradeWheels</h6>
+          </div>
+          <div class="row" style="margin-bottom: 0px">
+            <div class="input-field col s12 custom-input-field">
+              <input id="customer_name" type="text" class="validate">
+              <label for="customer_name">Name</label>
+            </div>
+          </div>
+          <div class="row" style="margin-bottom: 0px">
+            <div class="input-field col s12 custom-input-field">
+              <input id="email" type="email" class="validate">
+              <label for="email" data-error="Enter a valid email address">Email</label>
+            </div>
+          </div>
+          <div class="row" style="margin-bottom: 0px">
+            <div class="input-field col s12 custom-input-field">
+              <i class="material-icons prefix">phone</i>
+              <input id="phone_number" type="text" class="validate">
+              <label for="phone_number">Phone Number</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 custom-input-field">
+              <i class="material-icons prefix">perm_identity</i>
+              <input id="password" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <p>
+            <input type="checkbox" id="test5" />
+            <label for="test5">I accept the <a href="TermsandConditions.html" target="_blank">Terms &amp; Conditions</a></label>
+          </p>
+          <div class="row">
+              <a class="waves-effect waves-light btn" style="width: 100%; text-decoration: none;" id="signup_button"><i class="material-icons right">send</i>Signup</a>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+</div>
+
+<div id="forgot_password_modal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <div class="row">
+        <form class="col s12"  id="forgotpassword_main_form">
+          <div class="row">
+            <h6 align="center">Forgot Password ?</h6>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">phone</i>
+              <input id="secret" type="text" class="validate">
+              <label for="secret">Phone Number</label>
+            </div>
+          </div>
+          <div class="row">
+              <a class="waves-effect waves-light btn" style="width: 100%" id="forgot_password_submit_btn">Send OTP</a>
+          </div>
+        </form>
+        <form class="col s12" id="otp_verification_form" style="display: none">
+            <div class="row">
+                <h6 align="center" style="margin-bottom: 0px">Verification Message Sent</h6>
+                <br/>Please enter the OTP that was sent to your mobile <br/>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <input id="otp_from_form" type="text" class="validate">
+                    <label for="otp_from_form">Enter OTP</label>
+                </div>
+            </div>
+            <div class="row">
+                <a class="waves-effect waves-light btn" style="width: 100%" id="otp_verification_btn">Verify</a>
+            </div>
+            <div class="row">
+                <p id="change_phone_number_link" style="color: orange">Change Phone Number</p>
+            </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer #ffccbc deep-orange lighten-4" style="height: auto;">
+      <p style="text-align: center;">
+        Ready to start selling? <br/>
+        <a class="waves-effect waves-light btn modal-trigger" id="signup_button_in_forgotpassword" style="width: 50%; text-decoration: none; float: none;" href="#signup_modal"><i class="material-icons right">launch</i>Signup Now!</a>
+      </p>
+    </div>
+</div>
+
+<div id="car_evaluation_modal" class="modal">
+    <div class="modal-content" style="height: auto">
+        <div class="row">
+            <form class="col s12">
+                <div class="row" style="margin-bottom: 0px;">
+                    <h5 align="center">Get your car valued the best!</h5><br/>
+                </div>
+                <div class="row" style="margin-bottom: 0px">
+                    <div class="input-field col s12 custom-input-field">
+                        <select>
+                            <option value="" disabled selected>Choose the Brand</option>
+                            <option value="1">Mercedes Benz</option>
+                            <option value="2">Hyundai</option>
+                            <option value="3">Toyota</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 0px">
+                    <div class="input-field col s12 custom-input-field">
+                        <select>
+                            <option value="" disabled selected>Choose the Model</option>
+                            <option value="1">Elantra</option>
+                            <option value="2">Creta</option>
+                            <option value="3">i10 Grand</option>
+                            <option value="4">i20 Active</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 0px">
+                    <div class="input-field col s12 custom-input-field">
+                        <select>
+                            <option value="" disabled selected>Choose the year</option>
+                            <option value="1">2016</option>
+                            <option value="1">2015</option>
+                            <option value="1">2014</option>
+                            <option value="1">2013</option>
+                            <option value="1">2012</option>
+                            <option value="1">2011</option>
+                            <option value="1">2010</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 0px">
+                    <div class="input-field col s12 custom-input-field">
+                        <input id="no_kms_run" type="number" min="1000" max="200000" class="validate">
+                        <label for="no_kms_run">Number of Kilometres run</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="file-field input-field custom-input-field">
+                        <div class="btn">
+                            <span>Upload Photos</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <a class="btn waves-effect waves-light" style="width: 100%; text-decoration: none;" id="signup_button"><i class="material-icons right">send</i>Get Valuation</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+</div>
+
+<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="JavaScript/materialize.js"></script>
+</body>
+</html>
+
